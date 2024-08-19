@@ -1,0 +1,192 @@
+:root {
+	--square: 1.32%;
+	--square-margin: .3%;
+}
+
+html{
+	
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.parts{
+	
+}
+
+
+.lived{
+	background-color: #ff520e; /* Adjust this value to change the background color */
+	
+}
+.toLive{
+	background-color: #ffb70e; /* Adjust this value to change the background color */
+}
+
+.bornSection{
+	height: 100vh;
+	margin-top: 30vh;
+}
+
+.lifeAtGlance {
+	background-color: #ff520e;
+	height: 80vh;
+	display: flex;
+	margin: auto;
+	align-items:center;
+    justify-content:center;
+}
+
+.accomplishments{
+	background-color: #0eff9f;
+	transition: transform 0.3s;
+	border-radius: 5px;
+}
+.accomplishments:hover {
+	transform: scale(1.7);
+}
+
+.container-chart {
+	margin: 15vw;
+	width: 70vw;
+	place-items: center;
+	height: 70%;
+}
+
+
+
+  
+
+.your-life {
+	max-width: 1800px;
+  	margin: auto;
+}
+
+.stage{
+	/* display: flex; */
+	/* padding-top: 0.66%;
+	padding-bottom: 0.66%; */
+	/* border-left: solid .6vw; */
+	border-top: dashed .3vh;
+}
+.stage[data-stage="Early Years"]{
+	
+	/* background: #FEEED7; */
+	border-color: #FAB24C;
+}
+
+.stage[data-stage="Child"]{
+	/* background: #f1f4fc; */
+	border-color: #bed1ff;
+}
+
+.stage[data-stage="Teen"]{
+	/* background: #E7E5F1; */
+	border-color: #6B5CA5;
+}
+
+.stage[data-stage="Higher Education or Career"]{
+	/* background: #D6FAFF; */
+	border-color: #009FB7;
+}
+
+.stage[data-stage="Career"]{
+	/* background: #F8DEF1; */
+	border-color: #72195A;
+}
+
+.stage[data-stage="Retirment"]{
+	/* background: #EFFBF8; */
+	border-color: #84DCC6;
+	padding-bottom: 1%;
+}
+
+.your-life .week[data-lived="true"] {
+	background: #ff520E;
+    font-size: 1px;
+    margin: .3%;
+    padding-bottom: 1.32%;
+    transition: .3s;
+    width: 1.32%;
+	border-radius: 20%;
+}
+
+.week:hover {
+	box-shadow: 0 0 3px #fff;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.7);
+    z-index: 2;
+}
+
+.your-life .week[data-lived="false"] {
+    box-shadow: inset 0px 0px 0px .1vw #0b945d;
+	/* background: #e3f9ef; */
+    margin: .3%;
+    padding-bottom: 1.32%;
+    transition: .3s;
+    width: 1.32%;
+	border-radius: 20%;
+}
+
+.your-life .week[data-milestone="true"] {
+	box-shadow: inset 0px 0px 0px .1vw #ffcc34;
+	background-color: #ffcc34;
+}
+
+/* .to-live:hover {
+    box-shadow: 0 0 3px #fff;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 2;
+} */
+
+
+.year{
+	display: flex;
+    flex-wrap: wrap;
+    /* height: 100%; */
+    margin: 0 5px;
+    /* width: 100%; */
+	
+}
+
+
+
+#introBorn {
+	box-shadow: inset 0px 0px 0px 1vw #0eea92;
+	background: #e3f9ef;
+    transition: .3s;
+	border-radius: 20%;
+	height: 10vw;
+	width: 10vw;
+	min-height: 25px;
+	min-width: 25px;
+}
+
+.container-life{
+	margin-top: 150px;
+}
+
+
+.storyScroll{
+	display: grid;
+	place-items: center;
+	align-content: center;
+	min-height: 100vh;
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: start;
+}
+
+.hidden {
+	opacity: 0;
+	filter: blur (5px);
+	transform: translateY(-100%) ;
+	transition: all 1s;
+}
+.show {
+	opacity: 1;
+	filter: blur (5px);
+	transform:
+}

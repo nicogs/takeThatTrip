@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weeks To Live</title>
+	<link rel="stylesheet" href="/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+</head>
+<body>
+	<section class="container-sm bornSection" >
+		<div class="d-flex justify-content-around align-items-center">
+			<div id="introBorn" class="m-3"></div>
+		</div>
+		<div class="d-flex flex-column align-items-center">
+			<div class="p-2">
+				<h3>This is the week you were born...</h3>
+			</div>
+			<div class="p-2">
+				<label for="myBirth">... when was this?</label>
+			</div>
+			<div class="p-2">
+				<input type="date" id="inputMyBirth" value="1997-10-29">
+			</div>
+		</div>
+		<div class="d-grid gap-2 col-3 mx-auto">
+			<button id="btnAddBirthday" type="button" class="btn btn-outline-primary">continue</button>
+		  </div>
+	</section>
+
+	<!-- <section class="lifeAtGlance">
+		<div class="container-sm">
+			<div class="row">
+				<div id="divlifeAtGlanceChart" class="col col-xs-6">
+					
+				</div>
+				<div class="col col-xs-6">
+					<div id="divLifeAtGlance"></div>
+				</div>
+			</div>
+			
+		</div>
+	</section> -->
+
+	<section class="storyScroll">
+		<h2 id="headingWeeksLived">You're on week 1349 of 4199 of your life</h2>
+	</section>
+	<section class="storyScroll">
+		<h2 id="headingPctLived">32.1% of your life has already passed</h2>
+	</section>
+	<div class="container-sm">
+		<div class="container-life">
+			<div id="userLife" class="your-life">
+
+			</div>
+		</div>
+	</div>
+	<div class="sticky-bottom">
+		<div class="container-lg" style="max-width: 800px;">
+			<div class="card border-light m-2 py-1" >
+				<div class="card-body" >
+					<div class="d-flex justify-content-around align-items-center">
+						<h6>Year:<span class="badge rounded-pill text-bg-light" id="pillYear">25</span></h6>
+						<h6>Week:<span class="badge rounded-pill text-bg-light" id="pillWeek">35</span></h6>
+						<h6><span class="badge rounded-pill text-bg-light" id="pillStage">Teenager</span></h6>
+					</div>
+					<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="1335" aria-valuemin="0" aria-valuemax="4199" style="height: 5px">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 32%"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script src="/data.js"></script>
+	<script src="/weekConstructor.js"></script>
+	<script src="/renderer.js"></script>
+	<script src="/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+		
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	</script>
+</body>
+</html>
